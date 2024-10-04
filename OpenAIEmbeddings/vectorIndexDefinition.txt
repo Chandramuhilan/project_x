@@ -1,0 +1,53 @@
+vector_index
+{
+  "fields":[
+    {
+      "type": "vector",
+      "path": "plot_embedding_hf",
+    	"numDimensions":384,
+		  "similarity":"cosine",
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "plot_embedding": {
+        "dimensions": 1536,
+        "similarity": "dotProduct",
+        "type": "knnVector"
+      },
+      "genres": {
+        "normalizer": "lowercase",
+        "type": "token"
+      },
+      "imdb": {
+        "fields": {
+          "rating": {
+            "type": "number"
+          }
+        },
+        "type": "document"
+      }
+    }
+  }
+}

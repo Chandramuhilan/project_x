@@ -1,0 +1,15 @@
+vector_index
+{
+  "fields":[
+    {
+      "type": "vector",
+      "path": "plot_embedding_hf",
+    	"numDimensions":384,
+		  "similarity":"cosine"
+    }
+  ]
+}
+
+
+
+
